@@ -74,6 +74,8 @@ app.use('/auth', authRoutes);
 
 app.use('/feed', feedRoutes);
 
+const serverPort = 8080;
+
 app.use((error, _req, res, _next) => {
   const status = error.statusCode || 500;
   const message = error.message;
@@ -88,6 +90,6 @@ app.use((error, _req, res, _next) => {
 mongoose
   .connect(MONGODB_URI)
   .then(() => {
-    app.listen(process.env.PORT);
+    app.listen(process.env.PORT || serverPort);
   })
   .catch((_err) => {});
