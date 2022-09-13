@@ -90,4 +90,4 @@ mongoose
   .then(() => {
     app.listen(8080);
   })
-  .catch((err) => {});
+  .catch((_err) => {});
