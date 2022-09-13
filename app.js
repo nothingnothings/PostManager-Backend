@@ -24,7 +24,7 @@ app.use((_req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader(
     'Access-Control-Allow-Methods',
-    'OPTIONS, PUT, PATCH, GET, POST, DELETE'
+    'PUT, PATCH, GET, POST, DELETE, OPTIONS'
   );
   res.setHeader(
     'Access-Control-Allow-Headers',
