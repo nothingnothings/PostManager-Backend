@@ -88,6 +88,6 @@ app.use((error, _req, res, _next) => {
 mongoose
   .connect(MONGODB_URI)
   .then(() => {
-    app.listen(8080);
+    app.listen(process.env.PORT);
   })
   .catch((_err) => {});
