@@ -6,6 +6,8 @@ const isAuth = require('../middlewareHelpers/is-auth');
 
 const feedController = require('../controllers/feed');
 
+const { body } = require('express-validator');
+
 router.get(
   '/posts',
 
