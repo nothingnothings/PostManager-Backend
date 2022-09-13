@@ -34,7 +34,7 @@ app.use((_req, res, next) => {
 });
 
 const fileStorage = multer.diskStorage({
-  destination: (_req, file, cb) => {
+  destination: (_req, _file, cb) => {
     cb(null, 'images');
   },
   filename: (_req, file, cb) => {
@@ -74,7 +74,7 @@ app.use('/auth', authRoutes);
 
 app.use('/feed', feedRoutes);
 
-app.use((error, req, res, next) => {
+app.use((error, _req, res, _next) => {
   const status = error.statusCode || 500;
   const message = error.message;
   const data = error.data;

@@ -23,7 +23,6 @@ router.get(
 
 router.post(
   '/post',
-
   isAuth,
 
   [
