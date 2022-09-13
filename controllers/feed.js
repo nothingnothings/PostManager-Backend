@@ -1,23 +1,19 @@
-const Post = require('../models/post');
-
-const { validationResult } = require('express-validator');
-
 const fs = require('fs');
+const { validationResult } = require('express-validator');
 
 const ObjectId = require('mongodb').ObjectId;
 
 const User = require('../models/user');
+const Post = require('../models/post');
 
 const ITEMS_PER_PAGE = 5;
 
 exports.getPosts = (req, res, next) => {
   const pageNumber = req.query.page || 1;
+  let totalItems;
 
   const userId = ObjectId(req.userId);
-
   const name = req.name;
-
-  let totalItems;
 
   Post.countDocuments({ creator: { userId: userId, name: name } })
     .then((numPosts) => {
@@ -94,7 +90,7 @@ exports.createPost = (req, res, next) => {
           return user.addPost(post);
         });
       })
-      .then((result) => {
+      .then((_result) => {
         res.status(201).json({
           message: 'Post created successfully',
           post: post,
@@ -216,16 +212,16 @@ exports.deletePost = (req, res, next) => {
 
       return user.save();
     })
-    .then((result) => {
+    .then((_result) => {
       Post.findById(postId).then((post) => {
         if (!post) {
           const error = new Error('Post not found.');
           error.statusCode = 404;
           throw error;
         }
-        fs.unlink(post.imageUrl, (err) => {});
+        fs.unlink(post.imageUrl, (_err) => {});
 
-        return Post.findByIdAndRemove(postId).then((result) => {
+        return Post.findByIdAndRemove(postId).then((_result) => {
           res.status(200).json({
             message: 'The post was deleted.',
           });

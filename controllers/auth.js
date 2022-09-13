@@ -1,10 +1,8 @@
-const User = require('../models/user');
-
 const { validationResult } = require('express-validator');
-
 const { hash, compare } = require('bcryptjs');
-
 const jwt = require('jsonwebtoken');
+
+const User = require('../models/user');
 const keys = require('../config/keys');
 
 exports.signup = (req, res, next) => {
