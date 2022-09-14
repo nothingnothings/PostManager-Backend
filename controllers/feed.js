@@ -80,8 +80,6 @@ exports.createPost = (req, res, next) => {
       },
     });
 
-
-    console.log('EXAMPLE');
     post2
       .save()
       .then((result) => {

@@ -8,6 +8,8 @@ const feedController = require('../controllers/feed');
 
 const { body } = require('express-validator');
 
+const Post = require('../models/post');
+
 router.get(
   '/posts',
 
@@ -27,29 +29,29 @@ router.post(
   '/post',
   isAuth,
 
-  // [
-  //   body('title')
-  //     .trim()
-  //     .isLength({ min: 5 })
-  //     .withMessage('Title should be at least 6 characters long.')
-  //     .matches(/^[A-Za-z\s]+$/)
-  //     .withMessage('Post titles must contain only letters and spaces.')
-  //     .custom((value, { _req }) => {
-  //       return Post.findOne({ title: value }).then((post) => {
-  //         if (post) {
-  //           return Promise.reject(
-  //             'A post with the chosen title already exists, please choose another one.'
-  //           );
-  //         } else {
-  //           return value;
-  //         }
-  //       });
-  //     }),
-  //   body('content')
-  //     .trim()
-  //     .isLength({ min: 6 })
-  //     .withMessage('Content should be more than 6 characters long.'),
-  // ],
+  [
+    body('title')
+      .trim()
+      .isLength({ min: 5 })
+      .withMessage('Title should be at least 6 characters long.')
+      .matches(/^[A-Za-z\s]+$/)
+      .withMessage('Post titles must contain only letters and spaces.')
+      .custom((value, { _req }) => {
+        return Post.findOne({ title: value }).then((post) => {
+          if (post) {
+            return Promise.reject(
+              'A post with the chosen title already exists, please choose another one.'
+            );
+          } else {
+            return value;
+          }
+        });
+      }),
+    body('content')
+      .trim()
+      .isLength({ min: 6 })
+      .withMessage('Content should be more than 6 characters long.'),
+  ],
 
   feedController.createPost
 );
