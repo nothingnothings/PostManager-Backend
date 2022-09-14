@@ -70,7 +70,7 @@ exports.createPost = (req, res, next) => {
 
     let creator;
 
-    const post = new Post({
+    const post2 = new Post({
       title: title,
       content: content,
       imageUrl: imageUrl.replace(/\\/g, '/'),
@@ -82,7 +82,7 @@ exports.createPost = (req, res, next) => {
 
 
     console.log('EXAMPLE');
-    post
+    post2
       .save()
       .then((result) => {
         const postData = result;
@@ -95,7 +95,7 @@ exports.createPost = (req, res, next) => {
       .then((_result) => {
         res.status(201).json({
           message: 'Post created successfully',
-          post: post,
+          post: post2,
           creator: {
             _id: creator._id,
             name: creator.name,
