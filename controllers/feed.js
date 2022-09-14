@@ -85,11 +85,11 @@ exports.createPost = (req, res, next) => {
     post
       .save()
       .then((result) => {
-        const post = result;
+        const postData = result;
 
         return User.findOne({ _id: userId }).then((user) => {
           creator = user;
-          return user.addPost(post);
+          return user.addPost(postData);
         });
       })
       .then((_result) => {
