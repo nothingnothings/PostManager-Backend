@@ -73,7 +73,6 @@ exports.createPost = (req, res, next) => {
     const post = new Post({
       title: title,
       content: content,
-
       imageUrl: imageUrl.replace(/\\/g, '/'),
       creator: {
         userId: userId,
@@ -81,6 +80,8 @@ exports.createPost = (req, res, next) => {
       },
     });
 
+
+    console.log('EXAMPLE');
     post
       .save()
       .then((result) => {
