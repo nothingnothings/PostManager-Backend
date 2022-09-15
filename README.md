@@ -1,6 +1,6 @@
 # PostManager - Backend
 
-The backend of the [Post Manager project](https://github.com/nothingnothings/PostManager)(a simple ReactJS app with authentication and post creation logic, connected to this Node.js (Express.js) backend, helped by a MongoDB database)
+The backend of the [Post Manager project] (https://github.com/nothingnothings/PostManager)(a simple ReactJS app with authentication and post creation logic, connected to this Node.js (Express.js) backend, helped by a MongoDB database)
 
 The app was bootstrapped with create-react-app and deployed with GitHub Pages, assisted by the GitHub Actions feature.
 
