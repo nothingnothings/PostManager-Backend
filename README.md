@@ -162,43 +162,6 @@ The REST API backend's directory structure:
 └── package.json
 ```
 
-The create-react-app workflow's production output, as shown in the `gh-pages` branch (tasked with the deployment of the app):
-
-```
-.\
-│
-├── static\
-│   │
-│   ├── css\
-│   │   ├── 1.b0103ddb.chunk.css
-│   │   ├── 1.b0103ddb.chunk.css.map
-│   │   ├── main.176757f9.chunk.css
-│   │   └── main.176757f9.chunk.css.map
-│   │
-│   └── js\
-│       ├── 1.ab771bf3.chunk.js
-│       ├── 1.ab771bf3.chunk.js.map
-│       ├── main.8ad88ea1.chunk.js
-│       ├── main.8ad88ea1.chunk.js.map
-│       ├── runtime~main.720003f3.js
-│       └── runtime~main.720003f3.js.map
-│
-│
-├── .nojekyll
-├── 404.html
-├── logo192.png
-├── logo512.png
-├── apple-touch-icon.png
-├── asset-manifest.json
-├── favicon-16x16.png
-├── favicon-32x32.png
-├── favicon.ico
-├── index.html
-├── manifest.json
-├── precache-manifest.b9da06879698db9688cbb05c98f3fb50.js
-└── service-worker.js
-```
-
 ## Project Configuration Files (package.json)
 
 The package.json file used in the project:
@@ -250,10 +213,10 @@ The package.json file used in the project:
 To use this project, clone it using Git:
 
 1. Run `git clone` to clone the project into your local Git repository
-2. Run `npm install` to install all dependencies (`react`, `axios`, etc)
-3. Run `npm run build` to create the production/deployment version of the app (outputted in `/build`)
-4. Serve the production files locally or on the web, with the help of a hosting provider (although great part of the app relies/depends on the backend's data, which in the case of this demo, is served by a Node.js (Express.js) server, hosted on Heroku)
-5. For the purposes of this demo, on the Home page, input the credentials `exemplo@exemplo.com` (email) and `exemplo` (password) to access the apps's functionalities (Post Viewing and Creation)
+2. Run `npm install` to install all dependencies (`express`, `bcryptjs`, `mongodb`, etc)
+3. Run `npm start` to spin up the the app
+4. Use the server locally or deploy it on the web, with the help of a hosting provider (e.g. Heroku)
+5. For the purposes of this demo, on the "Get Started" (Authentication) page, input the credentials `exemplo@exemplo.com` (email) and `exemplo` (password) to access the apps's various features
 
 ## Features
 
