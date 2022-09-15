@@ -110,8 +110,11 @@ To use this project, clone it using Git:
 ## Features
 
 - Connected to a Single-Page Application ( no page reloads, REST API); serving of a single HTML file (index.html file, "skeleton" for the ReactJS components)
-- For deployment demonstration purposes, only a single user is enabled/created on the serverside, with the credentials exemplo@exemplo.com (email field) and exemplo (password field). Furthermore, the "Posts" made by the user are reset every 1 Hour (MongoDB "Scheduled Trigger" feature)
+- Serverside form input validation logic, powered by `express-validator`
 - Simple pagination logic for the list of posts ("Next" and "Previous" buttons)
+- For deployment demonstration purposes, only a single user is enabled/created on the serverside, with the credentials exemplo@exemplo.com (email field) and exemplo (password field). Furthermore, the "Posts" made by the user are reset every 1 Hour (MongoDB "Scheduled Trigger" feature)
+- Backend uses and manages the "User" and "Post" objects, which are stored on a MongoDB database (MongoDB Atlas service); the Node.js server and MongoDB database also handle the authentication logic (login/signup) implemented on the app
+- Usage of environment variables with Heroku to hide sensitive information (API_KEYS, Json Web Token secrets, database usernames and passwords, etc.)
 
 ## Inspiration
 
