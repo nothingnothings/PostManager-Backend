@@ -109,16 +109,9 @@ To use this project, clone it using Git:
 
 ## Features
 
-- Single-Page Application, no page reloads, single HTML file (ReactJS)
-- Application divided into many components, of which some are used more than a single time, on different pages (ReactJS design philosophy)
-- Form validation logic, in the landing page, powered by ReactJS's state management
-- Responsive design (adaptive, mobile and desktop support) created with Flexbox and media queries
-- Usage of GitHub Actions and GitHub Pages with the create-react-app utility for a seamless workflow (transition from development stage to production/deployment stage). Upon the git push command, GitHub Actions transfers the contents of the master branch into the gh-pages branch, which then deploys the app at https://nothingnothings.github.io/PostManager
-- Addition/removal of CSS classes ("fadeEnter" animation) implemented with `react-transition-group`
+- Connected to a Single-Page Application ( no page reloads, REST API); serving of a single HTML file (index.html file, "skeleton" for the ReactJS components)
 - For deployment demonstration purposes, only a single user is enabled/created on the serverside, with the credentials exemplo@exemplo.com (email field) and exemplo (password field). Furthermore, the "Posts" made by the user are reset every 1 Hour (MongoDB "Scheduled Trigger" feature)
-- Custom favicon, compatible with multiple devices
 - Simple pagination logic for the list of posts ("Next" and "Previous" buttons)
-- Usage of the `fetch()` API for communication with the Node.js (Express.js) backend, which manages the "User" and "Post" objects, stored on a MongoDB database (MongoDB Atlas service); the Node.js server and MongoDB database also handle the authentication logic (login) implemented on the app
 
 ## Inspiration
 
