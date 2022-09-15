@@ -20,7 +20,7 @@ Some of the Languages, Libraries and Packages employed on this backend:
 
 ## Project Directory Structure
 
-The development environment (with the use of the `create-react-app` tool/workflow):, as seen in the `master` branch:
+The REST API backend's directory structure:
 
 ```
 .\
@@ -197,7 +197,7 @@ The create-react-app workflow's production output, as shown in the `gh-pages` br
 └── service-worker.js
 ```
 
-## Webpack and package.json Configuration Files
+## Project Configuration Files (package.json)
 
 The package.json file used in the project:
 
