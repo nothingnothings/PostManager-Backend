@@ -27,137 +27,40 @@ The REST API backend's directory structure:
 ```
 .\
 │
-├── public\
-│   ├── 404.html
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── apple-touch-icon.png
-│   ├── favicon-16x16.png
-│   ├── favicon-32x32.png
-│   ├── favicon.ico
-│   ├── index.html
-│   └── manifest.json
+├── config\
+│   ├── dev.js
+│   ├── keys.js
+│   └── prod.js
 │
-├── src\
-│   │
-│   ├── components\
-│   │   │
-│   │   ├── Backdrop\
-│   │   │   ├── Backdrop.css
-│   │   │   └── Backdrop.js
-│   │   │
-│   │   ├── Button\
-│   │   │   ├── Button.css
-│   │   │   └── Button.js
-│   │   │
-│   │   ├── ErrorHandler\
-│   │   │   └── ErrorHandler.js
-│   │   │
-│   │   ├── Feed\
-│   │   │   │
-│   │   │   └── Post\
-│   │   │       ├── Post.css
-│   │   │       └── Post.js
-│   │   │
-│   │   │
-│   │   ├── Footer\
-│   │   │   ├── Footer.css
-│   │   │   └── Footer.js
-│   │   │
-│   │   ├── Form\
-│   │   │   │
-│   │   │   └── Input\
-│   │   │       ├── FilePicker.js
-│   │   │       ├── Input.css
-│   │   │       └── Input.js
-│   │   │
-│   │   │
-│   │   ├── Image\
-│   │   │   ├── Avatar.css
-│   │   │   ├── Avatar.js
-│   │   │   ├── Image.css
-│   │   │   └── Image.js
-│   │   │
-│   │   ├── Layout\
-│   │   │   ├── Layout.css
-│   │   │   └── Layout.js
-│   │   │
-│   │   ├── Loader\
-│   │   │   ├── Loader.css
-│   │   │   └── Loader.js
-│   │   │
-│   │   ├── Logo\
-│   │   │   ├── Logo.css
-│   │   │   └── Logo.js
-│   │   │
-│   │   ├── Modal\
-│   │   │   ├── Modal.css
-│   │   │   └── Modal.js
-│   │   │
-│   │   ├── Navigation\
-│   │   │   │
-│   │   │   ├── MainNavigation\
-│   │   │   │   ├── MainNavigation.css
-│   │   │   │   └── MainNavigation.js
-│   │   │   │
-│   │   │   ├── MobileNavigation\
-│   │   │   │   ├── MobileNavigation.css
-│   │   │   │   └── MobileNavigation.js
-│   │   │   │
-│   │   │   ├── MobileToggle\
-│   │   │   │   ├── MobileToggle.css
-│   │   │   │   └── MobileToggle.js
-│   │   │   │
-│   │   │   └── NavigationItems\
-│   │   │       ├── NavigationItems.css
-│   │   │       └── NavigationItems.js
-│   │   │
-│   │   │
-│   │   ├── Paginator\
-│   │   │   ├── Paginator.css
-│   │   │   └── Paginator.js
-│   │   │
-│   │   ├── SinglePostPaginator\
-│   │   │   ├── SinglePostPaginator.css
-│   │   │   └── SinglePostPaginator.js
-│   │   │
-│   │   └── Toolbar\
-│   │       ├── Toolbar.css
-│   │       └── Toolbar.js
-│   │
-│   │
-│   ├── pages\
-│   │   │
-│   │   ├── Auth\
-│   │   │   ├── Auth.css
-│   │   │   ├── Auth.js
-│   │   │   ├── Login.css
-│   │   │   └── Login.js
-│   │   │
-│   │   └── Feed\
-│   │       │
-│   │       ├── FeedEdit\
-│   │       │   ├── FeedEdit.css
-│   │       │   └── FeedEdit.js
-│   │       │
-│   │       ├── SinglePost\
-│   │       │   ├── SinglePost.css
-│   │       │   └── SinglePost.js
-│   │       │
-│   │       ├── Feed.css
-│   │       └── Feed.js
-│   │
-│   │
-│   ├── util\
-│   │   ├── image.js
-│   │   └── validators.js
-│   │
-│   ├── App.css
-│   ├── App.js
-│   ├── index.css
-│   └── index.js
+├── controllers\
+│   ├── auth.js
+│   └── feed.js
+│
+├── images\
+│   ├── 504c296d-482d-4d6a-8821-9991b3ea47c6-0c64c92d97cf2c5f4ce1be7b81537d55.png
+│   ├── 90fd0c3b-533d-4a9a-92c4-ab5af0cb6f6f-nodejs_original_wordmark_logo_icon_146412.png
+│   ├── 9409c72d-3fb3-43e3-b499-396752769a5e-Unofficial_JavaScript_logo_2.svg.png
+│   ├── aec4a1bc-c807-4b12-8772-dd7d7e4cf309-mongodb_original_wordmark_logo_icon_146425.png
+│   ├── ca6cceac-4648-457b-9306-273b22427567-Unofficial_JavaScript_logo_2.svg.png
+│   ├── d3ff5457-17c2-4b71-895e-4802b63cdd7a-logo-og.png
+│   ├── d980ff73-f1da-488b-bc21-42efffcfa220-0c64c92d97cf2c5f4ce1be7b81537d55.png
+│   ├── e17bbaa2-ef31-4d34-ab98-949ffafc7594-Unofficial_JavaScript_logo_2.svg.png
+│   ├── eb3f5305-bd34-43e5-baa6-374b19358510-mobile-first-.jpg
+│   └── f2036847-ce43-4135-8519-4c5b3d4030c1-Unofficial_JavaScript_logo_2.svg.png
+│
+├── middlewareHelpers\
+│   └── is-auth.js
+│
+├── models\
+│   ├── post.js
+│   └── user.js
+│
+├── routes\
+│   ├── auth.js
+│   └── feed.js
 │
 ├── .gitignore
+├── app.js
 ├── package-lock.json
 └── package.json
 ```
@@ -168,40 +71,26 @@ The package.json file used in the project:
 
 ```
 {
-  "name": "post-manager",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://nothingnothings.github.io/PostManager",
-  "dependencies": {
-    "@fortawesome/free-regular-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@types/react-fontawesome": "^1.6.5",
-    "bootstrap": "^5.1.3",
-    "react": "^16.5.2",
-    "react-bootstrap": "^2.4.0",
-    "react-dom": "^16.5.2",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.4",
-    "react-transition-group": "^4.4.2"
-  },
+  "name": "nodeexpressbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.2.0",
+    "mongoose": "^6.0.13",
+    "multer": "^1.4.3",
+    "uuid": "^8.3.2"
   }
 }
 
