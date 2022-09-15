@@ -1,6 +1,6 @@
 # PostManager - Backend
 
-The backend of the [Post Manager project] (https://github.com/nothingnothings/PostManager); essentially a Node.js REST API backend with authentication and post creation logic, connected to a ReactJS frontend and deployed on the Heroku platform.
+The backend of the [Post Manager project](https://github.com/nothingnothings/PostManager); essentially a Node.js REST API backend with authentication and post creation logic, connected to a ReactJS frontend and deployed on the Heroku platform.
 
 
 ## Technologies
