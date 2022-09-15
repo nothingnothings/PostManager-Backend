@@ -1,26 +1,22 @@
 # PostManager - Backend
 
-The backend of the [Post Manager project] (https://github.com/nothingnothings/PostManager)(a simple ReactJS app with authentication and post creation logic, connected to this Node.js (Express.js) backend, helped by a MongoDB database)
+The backend of the [Post Manager project] (https://github.com/nothingnothings/PostManager); essentially a Node.js REST API backend with authentication and post creation logic, connected to a ReactJS frontend and deployed on the Heroku platform.
 
-The app was bootstrapped with create-react-app and deployed with GitHub Pages, assisted by the GitHub Actions feature.
-
-The REST API backend portion of the app can be found [here](https://github.com/nothingnothings/PostManager-Backend).
 
 ## Technologies
 
-Some of the Languages, Libraries and packages employed:
+Some of the Languages, Libraries and Packages employed on this backend:
 
-- Node Package Manager (for bootstrapping and managing the React app)
-- HTML5 (JSX)
-- CSS3 (animations, Flexbox, media queries)
-- ReactJS (JavaScript Library, app built entirely of React components; usage of "state" to manage form validation, etc.)
-- Form validation logic (state-based input validation, logic for adding and removing "touched" and "invalid" styles, etc.)
-- Responsive mobile design (sidebar, Flexbox, media queries)
-- Bootstrap (mainly the Footer component)
-- Font Awesome (Footer component's icons)
+- Node
+- Express.js (middleware-based Node.js framework; used for an enhanced backend endpoint setup)
+- Node Package Manager (for bootstrapping and managing the Node.js app)
 - MongoDB (noSQL database storage solution; storage of `user` and `post` objects into collections in a remote MongoDB Atlas database)
-- Fetch API usage (for the JSON communication, requests and responses, between the frontend app and the Node.js/express.js backend targeted by it)
-- For the sending of the data of the posts to the backend, `FormData()` and `FileReader()`; JavaScript APIs/Objects used to send multipart HTTP requests (strings/text and images) to the Node.js backend, where the JSON data is separated from the image data (files chosen by the user), before being handled appropriately
+- `body-parser` (needed for the parsing of the JSON data sent by the frontend)
+- `express-validator` (validation of inputted user data, on the backend, with methods such as "isEmpty()" and "isLength()")
+- `bcryptjs` (used for storing encrypted passwords inside of `user` documents on MongoDB database)
+- `multer` - used for receiving product image files, on the "Add a Product" endpoint (disabled on this demo version of the app)
+- `jsonwebtoken` (for the generation of JSON Web Tokens, which are then stored on the local storage of the user's browser and then checked for authentication)
+
 
 ## Project Directory Structure
 
