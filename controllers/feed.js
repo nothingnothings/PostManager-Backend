@@ -150,7 +150,7 @@ exports.editPost = (req, res, next) => {
       }
 
       if (imageUrl !== post.imageUrl) {
-        fs.unlink(post.imageUrl, (_err) => {});
+        fs.unlink(post.imageUrl, () => {});
       }
       post.title = title;
       post.imageUrl = imageUrl.replace(/\\/g, '/');
