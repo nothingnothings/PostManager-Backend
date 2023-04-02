@@ -212,7 +212,7 @@ exports.deletePost = (req, res, next) => {
 
       return user.save();
     })
-    .then((_result) => {
+    .then(() => {
       Post.findById(postId).then((post) => {
         if (!post) {
           const error = new Error('Post not found.');
