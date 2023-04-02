@@ -221,7 +221,7 @@ exports.deletePost = (req, res, next) => {
         }
         fs.unlink(post.imageUrl, (_err) => {});
 
-        return Post.findByIdAndRemove(postId).then((_result) => {
+        return Post.findByIdAndRemove(postId).then(() => {
           res.status(200).json({
             message: 'The post was deleted.',
           });
