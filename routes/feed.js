@@ -36,7 +36,7 @@ router.post(
       .withMessage('Title should be at least 6 characters long.')
       .matches(/^[A-Za-z\s]+$/)
       .withMessage('Post titles must contain only letters and spaces.')
-      .custom((value, { _req }) => {
+      .custom((value) => {
         return Post.findOne({ title: value }).then((post) => {
           if (post) {
             return Promise.reject(
