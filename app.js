@@ -92,4 +92,4 @@ mongoose
   .then(() => {
     app.listen(process.env.PORT || serverPort);
   })
-  .catch((_err) => {});
+  .catch(() => {});
