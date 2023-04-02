@@ -219,7 +219,7 @@ exports.deletePost = (req, res, next) => {
           error.statusCode = 404;
           throw error;
         }
-        fs.unlink(post.imageUrl, (_err) => {});
+        fs.unlink(post.imageUrl, () => {});
 
         return Post.findByIdAndRemove(postId).then(() => {
           res.status(200).json({
