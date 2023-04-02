@@ -90,7 +90,7 @@ exports.createPost = (req, res, next) => {
           return user.addPost(postData);
         });
       })
-      .then((_result) => {
+      .then(() => {
         res.status(201).json({
           message: 'Post created successfully',
           post: post2,
