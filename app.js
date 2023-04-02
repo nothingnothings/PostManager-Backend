@@ -76,7 +76,7 @@ app.use('/feed', feedRoutes);
 
 const serverPort = 8080;
 
-app.use((error, _req, res, _next) => {
+app.use((error, _req, res) => {
   const status = error.statusCode || 500;
   const message = error.message;
   const data = error.data;
