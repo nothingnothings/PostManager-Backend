@@ -2,7 +2,7 @@
 
 The backend of the [Post Manager](https://github.com/nothingnothings/PostManager) project.
 
-Essentially a Node.js REST API backend with authentication and post creation logic, connected to a ReactJS frontend and deployed on the Heroku platform.
+Essentially a Node.js REST API backend with authentication and post creation logic, connected to a ReactJS frontend and deployed on the Railway platform.
 
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/nothingnothings/PostManager-Backend/master?style=flat-square)
 [![HitCount](https://hits.dwyl.com/nothingnothings/PostManager-Backend.svg?style=flat-square)](http://hits.dwyl.com/nothingnothings/PostManager-Backend)
@@ -108,7 +108,7 @@ To use this project, clone it using Git:
 1. Run `git clone` to clone the project into your local Git repository
 2. Run `npm install` to install all dependencies (`express`, `bcryptjs`, `mongodb`, etc)
 3. Run `npm start` to spin up the the app
-4. Use the server locally or deploy it on the web, with the help of a hosting provider (e.g. Heroku)
+4. Use the server locally or deploy it on the web, with the help of a hosting provider (e.g. Railway)
 5. For the purposes of this demo, on the "Get Started" (Authentication) page, input the credentials `exemplo@exemplo.com` (email) and `exemplo` (password) to access the apps's various features
 
 ## Features
@@ -118,7 +118,7 @@ To use this project, clone it using Git:
 - Simple pagination logic for the list of posts ("Next" and "Previous" buttons)
 - For deployment demonstration purposes, only a single user is enabled/created on the serverside, with the credentials exemplo@exemplo.com (email field) and exemplo (password field). Furthermore, the "Posts" made by the user are reset every 1 Hour (MongoDB "Scheduled Trigger" feature)
 - Backend uses and manages the "User" and "Post" objects, which are stored on a MongoDB database (MongoDB Atlas service); the Node.js server and MongoDB database also handle the authentication logic (login/signup) implemented on the app
-- Usage of environment variables with Heroku to hide sensitive information (API_KEYS, Json Web Token secrets, database usernames and passwords, etc.)
+- Usage of environment variables with Railway to hide sensitive information (API_KEYS, Json Web Token secrets, database usernames and passwords, etc.)
 
 ## Inspiration
 
