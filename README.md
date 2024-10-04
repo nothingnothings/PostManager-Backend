@@ -5,7 +5,8 @@ The backend of the [Post Manager](https://github.com/nothingnothings/PostManager
 Essentially a Node.js REST API backend with authentication and post creation logic, connected to a ReactJS frontend and deployed on the Railway platform.
 
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/nothingnothings/PostManager-Backend/master?style=flat-square)
-[![HitCount](https://hits.dwyl.com/nothingnothings/PostManager-Backend.svg?style=flat-square)](http://hits.dwyl.com/nothingnothings/PostManager-Backend)
+[![en](https://img.shields.io/badge/lang-en-red.svg?style=flat-square)](https://github.com/nothingnothings/PostManager-Backend)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg?style=flat-square)](https://github.com/nothingnothings/PostManager-Backend/blob/master/README.pt-br.md)
 
 
 
